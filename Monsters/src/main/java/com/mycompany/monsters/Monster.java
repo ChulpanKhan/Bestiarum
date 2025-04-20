@@ -1,16 +1,23 @@
 
 package com.mycompany.monsters;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement(name = "monster")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Monster {
     private String name;
     private String description;
     private int dangerLevel;
     private String habitat;
     private String firstMention;
+    private String vulnerabilities;
     private String immunities;
     private String activity;
-    private int heightInMetres;
-    private int weightInKg;
+    private String height;
+    private String weight;
     private Recipe recipe;
     private String source;
     
@@ -30,17 +37,20 @@ public class Monster {
     public String getFirstMention() {
         return firstMention;
     }
+    public String getVulnerabilities() {
+        return vulnerabilities;
+    }
     public String getImmunities() {
         return immunities;
     }
     public String getActivity() {
         return activity;
     }
-    public int getHeightInMetres() {
-        return heightInMetres;
+    public String getHeight() {
+        return height;
     }
-    public int getWeightInKg() {
-        return weightInKg;
+    public String getWeight() {
+        return weight;
     }
     public Recipe getRecipe() {
         return recipe;
@@ -65,17 +75,20 @@ public class Monster {
     public void setFirstMention(String firstMention) {
         this.firstMention = firstMention;
     }
+    public void setVulnerabilities(String vulnerabilities) {
+        this.vulnerabilities = vulnerabilities;
+    }
     public void setImmunities(String immunities) {
         this.immunities = immunities;
     }
     public void setActivity(String activity) {
         this.activity = activity;
     }
-    public void setHeightInMetres(int heightInMetres) {
-        this.heightInMetres = heightInMetres;
+    public void setHeight(String height) {
+        this.height= height;
     }
-    public void setWeightInKg(int weightInKg) {
-        this.weightInKg = weightInKg;
+    public void setWeight(String weight) {
+        this.weight = weight;
     }
     public void setRecipe(Recipe recipe) {
         this.recipe = recipe;

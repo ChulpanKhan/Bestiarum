@@ -12,7 +12,11 @@
         <weight>300 кг</weight>
         <recipe>
             <type>яд</type>
-            <ingredients>корень мандрагоры (3), пепел драконида (1), эссенция полыни</ingredients>
+            <ingredients>
+                <entry><key>корень мандрагоры</key><value>3</value></entry>
+                <entry><key>пепел драконида</key><value>1</value></entry>
+                <entry><key>эссенция полыни</key><value>1</value></entry>
+            </ingredients>
             <preparationTime>60 мин</preparationTime>
             <effectiveness>умеренная</effectiveness>
         </recipe>
@@ -29,7 +33,11 @@
         <weight>неосязаем</weight>
         <recipe>
             <type>масло</type>
-            <ingredients>лепестки лунного цветка (2), серебряная нить (1), экстракт чеснока</ingredients>
+            <ingredients>
+                <entry><key>лепестки лунного цветка</key><value>2</value></entry>
+                <entry><key>серебряная нить</key><value>1</value></entry>
+                <entry><key>экстракт чеснока</key><value>1</value></entry>
+            </ingredients>
             <preparationTime>30 мин</preparationTime>
             <effectiveness>высокая</effectiveness>
         </recipe>
@@ -46,7 +54,11 @@
         <weight>200 кг</weight>
         <recipe>
             <type>масло</type>
-            <ingredients>жало мантикоры (4), нефритовая пыль (2), спирт Альберихта</ingredients>
+            <ingredients>
+                <entry><key>жало мантикоры</key><value>4</value></entry>
+                <entry><key>нефритовая пыль</key><value>2</value></entry>
+                <entry><key>спирт Альберихта</key><value>1</value></entry>
+            </ingredients>
             <preparationTime>90 мин</preparationTime>
             <effectiveness>критическая</effectiveness>
         </recipe>
@@ -63,7 +75,11 @@
         <height>1 м</height>
         <weight>15 кг</weight>
         <recipe>
-            <ingredients>грибы-поганки (5), глаз василиска (1), роса папоротника (3)</ingredients>
+            <ingredients>
+                <entry><key>грибы-поганки</key><value>5</value></entry>
+                <entry><key>глаз василиска</key><value>1</value></entry>
+                <entry><key>роса папоротника</key><value>3</value></entry>
+            </ingredients>
             <preparationTime>45 мин</preparationTime>
             <effectiveness>средняя</effectiveness>
         </recipe>
@@ -80,7 +96,11 @@
         <weight>не измерим</weight>
         <recipe>
             <type>яд</type>
-            <ingredients>сердце огненного элементаля (1), сера (3), расплавленное железо</ingredients>
+            <ingredients>
+                <entry><key>сердце огненного элементаля</key><value>1</value></entry>
+                <entry><key>сера</key><value>3</value></entry>
+                <entry><key>расплавленное железо</key><value>1</value></entry>
+            </ingredients>
             <preparationTime>120 мин</preparationTime>
             <effectiveness>переменная</effectiveness>
         </recipe>

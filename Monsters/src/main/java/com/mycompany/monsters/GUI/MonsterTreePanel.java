@@ -1,9 +1,8 @@
-
+ 
 package com.mycompany.monsters.GUI;
 
 import com.mycompany.monsters.Monster;
 import com.mycompany.monsters.MonsterController;
-import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Font;
@@ -13,7 +12,6 @@ import javax.swing.JTree;
 import javax.swing.tree.DefaultMutableTreeNode;
 import javax.swing.tree.DefaultTreeModel;
 import javax.swing.tree.TreeNode;
-import javax.swing.tree.TreePath;
 
 public class MonsterTreePanel extends JPanel {
     private final JTree tree;
@@ -84,10 +82,6 @@ public class MonsterTreePanel extends JPanel {
     public void refreshTree() {
         tree.setModel(new DefaultTreeModel((TreeNode) buildTree().getModel().getRoot()));
         expandAllTreeNodes();
-//        if (scrollPane != null) {
-//            scrollPane.revalidate();
-//            scrollPane.repaint();
-//        }
     }
 
     private void expandAllTreeNodes() {
@@ -97,9 +91,7 @@ public class MonsterTreePanel extends JPanel {
     }
 
     public JScrollPane getScrollPane() {
-        //JScrollPane 
-                scrollPane = new JScrollPane(tree);
-//scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
+        scrollPane = new JScrollPane(tree);
         scrollPane.setPreferredSize(new Dimension(200, 0));
         return scrollPane;
     }

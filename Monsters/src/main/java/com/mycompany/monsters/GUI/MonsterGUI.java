@@ -5,7 +5,6 @@ import com.mycompany.monsters.FileFormat;
 import com.mycompany.monsters.Monster;
 import com.mycompany.monsters.MonsterController;
 import java.awt.BorderLayout;
-import java.awt.Component;
 import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.GridLayout;
@@ -44,7 +43,7 @@ public class MonsterGUI extends JFrame{
         setVisible(true);
     }
 
-    private Component buildButtonPanel() {
+    private JPanel buildButtonPanel() {
         JPanel panel = new JPanel();
 
         JButton importBtn = new JButton("Импортировать");

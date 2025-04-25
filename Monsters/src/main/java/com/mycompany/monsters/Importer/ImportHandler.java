@@ -6,6 +6,6 @@ import java.io.File;
 
 public interface ImportHandler {
     void setNext(ImportHandler nextHandler);
-    void handle(File file, MonsterStorage storage);
+    void handle(File file);
     boolean canHandle(File file);
 }

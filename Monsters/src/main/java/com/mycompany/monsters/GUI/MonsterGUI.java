@@ -1,23 +1,19 @@
 
 package com.mycompany.monsters.GUI;
 
-import com.mycompany.monsters.Exporters.*;
 import com.mycompany.monsters.FileFormat;
 import com.mycompany.monsters.Monster;
 import com.mycompany.monsters.MonsterController;
-import com.mycompany.monsters.MonsterStorage;
 import java.awt.BorderLayout;
 import java.awt.Component;
+import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.GridLayout;
-import java.awt.PopupMenu;
 import java.util.List;
 import javax.swing.JButton;
 import javax.swing.JDialog;
 import javax.swing.JFrame;
-import javax.swing.JOptionPane;
 import javax.swing.JPanel;
-import javax.swing.JScrollPane;
 
 public class MonsterGUI extends JFrame{
     private final MonsterController controller;
@@ -68,8 +64,6 @@ public class MonsterGUI extends JFrame{
         return panel;
     }
 
-
-    
     private void showExportDialog() {
         JDialog dialog = new JDialog(this, "Выберите формат для экспорта", true);
         dialog.setLayout(new GridLayout(0, 1));
@@ -80,7 +74,8 @@ public class MonsterGUI extends JFrame{
         JButton exit = new JButton("Закрыть");
         exit.addActionListener(e -> dialog.dispose());
         dialog.add(exit);
-
+        
+        dialog.setPreferredSize(new Dimension(250, 150));
         dialog.pack();
         dialog.setLocationRelativeTo(this);
         dialog.setVisible(true);
@@ -112,6 +107,5 @@ public class MonsterGUI extends JFrame{
         });
         return button;
     }
-
 
 }

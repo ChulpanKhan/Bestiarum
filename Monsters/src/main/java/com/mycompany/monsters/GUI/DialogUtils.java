@@ -1,7 +1,6 @@
 
 package com.mycompany.monsters.GUI;
 
-import java.io.File;
 import javax.swing.JOptionPane;
 
 public class DialogUtils {

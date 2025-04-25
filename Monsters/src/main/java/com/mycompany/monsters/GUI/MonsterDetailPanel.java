@@ -15,7 +15,6 @@ import javax.swing.Box;
 import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JLabel;
-import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
@@ -36,13 +35,12 @@ public class MonsterDetailPanel extends JPanel {
         editorPanel = new JPanel();
         editorPanel.setLayout(new BoxLayout(editorPanel, BoxLayout.Y_AXIS));
 
-        //add(welcomeLabel, BorderLayout.CENTER);
         add(new JScrollPane(editorPanel), BorderLayout.CENTER);
         showWelcome(); 
         editorPanel.setVisible(true);
     }
 
-    void showWelcome() {
+    public void showWelcome() {
         editorPanel.removeAll();
         String htmlText = "<html><div style='text-align: center; '>"
                 + "<h2>База данных магических существ: от монстров Ведьмака до фей Winx</h2>"
@@ -68,7 +66,7 @@ public class MonsterDetailPanel extends JPanel {
     }
  
 
-    void displayMonster(Monster monster) {
+    public void displayMonster(Monster monster) {
         editorPanel.removeAll();
 
         boolean isWinx = monster.getUniverse()!= null && monster.getUniverse().contains("винкс");

@@ -14,17 +14,23 @@ import javax.xml.bind.Unmarshaller;
 
 public class XMLImporter implements ImportHandler{
     private ImportHandler nextHandler;
+    private MonsterStorage storage;
+  
+    public XMLImporter(MonsterStorage storage) {
+        this.storage = storage;
+    }
+
     @Override
     public void setNext(ImportHandler nextHandler) {
         this.nextHandler = nextHandler;
     }
 
     @Override
-    public void handle(File file, MonsterStorage storage) {
+    public void handle(File file) {
         if (canHandle(file)) {
-            try{
-               JAXBContext context = JAXBContext.newInstance(MonstersWrapper.class);
-               Unmarshaller unmarshaller = context.createUnmarshaller();
+            try {
+                JAXBContext context = JAXBContext.newInstance(MonstersWrapper.class);
+                Unmarshaller unmarshaller = context.createUnmarshaller();
                MonstersWrapper monsterList = (MonstersWrapper) unmarshaller.unmarshal(file);
                List<Monster> monsters = monsterList.getMonsters();
                for (Monster m : monsters) {
@@ -34,7 +40,7 @@ public class XMLImporter implements ImportHandler{
                     } else {
                         m.setUniverse("винкс");
                     } 
-                    storage.add(m);
+                    this.storage.add(m);
                 }
             } catch (JAXBException e) {
                 DialogUtils.showErrorMessage("Ошибка JAXB: " + e.getMessage());
@@ -43,7 +49,7 @@ public class XMLImporter implements ImportHandler{
                 DialogUtils.showErrorMessage("Общая ошибка: " + e.getMessage());
                 System.err.println("Общая ошибка: " + e.getMessage());
             }
-        } else if (nextHandler != null) nextHandler.handle(file, storage);
+        } else if (nextHandler != null) nextHandler.handle(file);
     }
     
     @Override

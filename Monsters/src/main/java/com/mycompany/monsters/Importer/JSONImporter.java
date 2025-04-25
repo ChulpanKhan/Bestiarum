@@ -15,13 +15,19 @@ import java.util.logging.Logger;
 
 public class JSONImporter implements ImportHandler{
     private ImportHandler nextHandler;
-    
+    private MonsterStorage storage;
+
+    public JSONImporter(MonsterStorage storage) {
+        this.storage = storage;
+    }
+
     @Override
     public void setNext(ImportHandler nextHandler) {
         this.nextHandler = nextHandler;
     }
+
     @Override
-     public void handle(File file, MonsterStorage storage) {
+    public void handle(File file) {
         if (canHandle(file)) {
             try {
                 ObjectMapper mapper = new ObjectMapper();
@@ -34,13 +40,13 @@ public class JSONImporter implements ImportHandler{
                     } else {
                         m.setUniverse("винкс");
                     } 
-                    storage.add(m);
+                    this.storage.add(m);
                 }
             } catch (IOException ex) {
                 DialogUtils.showErrorMessage(ex.getMessage());
                 Logger.getLogger(JSONImporter.class.getName()).log(Level.SEVERE, null, ex);
             } 
-        } else if (nextHandler != null) nextHandler.handle(file, storage);
+        } else if (nextHandler != null) nextHandler.handle(file);
     }
 
     @Override

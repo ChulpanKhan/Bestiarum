@@ -20,28 +20,22 @@ public class MonsterController {
     private final Map<FileFormat, Exporter> exporters;
 
     public MonsterController() {
-        ImportHandler xml = new XMLImporter();
-        ImportHandler json = new JSONImporter();
-        ImportHandler yaml = new YAMLImporter();
+        ImportHandler xml = new XMLImporter(xmlStorage);
+        ImportHandler json = new JSONImporter(jsonStorage);
+        ImportHandler yaml = new YAMLImporter(yamlStorage);
         xml.setNext(json);
         json.setNext(yaml);
         this.importerChain = xml;
         this.exporters = Map.of(FileFormat.XML, new XMLExporter(),FileFormat.JSON, new JSONExporter(), FileFormat.YAML, new YAMLExporter() );
     } 
-    
+
     public void importFiles() {
         File importFile = FileChooser.selectImportFile();
         if (importFile != null) {
-            String fileName = importFile.getName().toLowerCase();
-            if (fileName.endsWith(".xml")) 
-                importerChain.handle(importFile, xmlStorage);
-            else if (fileName.endsWith(".json")) 
-                importerChain.handle(importFile, jsonStorage);
-            else
-                importerChain.handle(importFile, yamlStorage);
-        }    
+            importerChain.handle(importFile); 
+        }
     }
-    
+
     public MonsterStorage getXmlStorage() {
         return xmlStorage;
     }

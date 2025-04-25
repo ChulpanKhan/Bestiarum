@@ -105,4 +105,109 @@
             <effectiveness>переменная</effectiveness>
         </recipe>
     </monster>
+	<monster>
+		<name>Блум</name>
+		<description>Фея Огня Дракона, обладающая древней магией. Является связующим звеном между миром людей и Магиксом.</description>
+		<dangerLevel>8</dangerLevel>
+		<habitat>Алфея, Домино, Пылающие поля</habitat>
+		<firstMention>2004-01-28</firstMention>
+		<immunities>огонь, проклятия, иллюзии</immunities>
+		<activity>днём и в бою</activity>
+		<height>1.65 м</height>
+		<weight>50 кг</weight>
+		<recipe>
+		  <type>магический эликсир</type>
+		  <ingredients>
+		    <entry><key>пепел феникса</key><value>2</value></entry>
+			<entry><key>искра древнего пламени</key><value>1</value></entry>
+			<entry><key>слёзы саламандры</key><value>5</value></entry>
+		  </ingredients>
+		  <preparationTime>90 мин</preparationTime>
+		  <effectiveness>высокая</effectiveness>
+		</recipe>
+	</monster>
+	<monster>
+		<name>Муза</name>
+		<description>Фея музыки, питающаяся ритмом и гармонией. Может успокаивать разум и нарушать магические потоки.</description>
+		<dangerLevel>6</dangerLevel>
+		<habitat>Мелодия, леса звуков</habitat>
+		<firstMention>2004-02-04</firstMention>
+		<immunities>ментальная атака, гипноз</immunities>
+		<activity>ночью</activity>
+		<height>1.63 м</height>
+		<weight>48 кг</weight>
+		<recipe>
+		  <type>настой</type>
+		  <ingredients>
+			<entry><key>стебель лиры</key><value>2</value></entry>
+			<entry><key>кристалл тишины</key><value>1</value></entry>
+			<entry><key>эхосфера</key><value>3</value></entry>
+		  </ingredients>
+		  <preparationTime>45 мин</preparationTime>
+		  <effectiveness>умеренная</effectiveness>
+		</recipe>
+	</monster>
+	<monster>
+		<name>Флора</name>
+		<description>Фея природы. Управляет растениями, создаёт лечебные отвары и яды.</description>
+		<dangerLevel>5</dangerLevel>
+		<habitat>Линфея, волшебные сады</habitat>
+		<firstMention>2004-02-11</firstMention>
+		<immunities>яды, парализующие токсины</immunities>
+		<activity>днём</activity>
+		<height>1.70 м</height>
+		<weight>52 кг</weight>
+		<recipe>
+		  <type>зелье</type>
+		  <ingredients>
+			<entry><key>лепестки вечной розы</key><value>3</value></entry>
+			<entry><key>корень цветущего дуба</key><value>1</value></entry>
+			<entry><key>корень цветущего дуба</key><value>4</value></entry>
+		  </ingredients>
+		  <preparationTime>60 мин</preparationTime>
+		  <effectiveness>лечебная</effectiveness>
+		</recipe>
+	  </monster>
+	  <monster>
+		<name>Лейла</name>
+		<description>Фея волн. Контролирует жидкости и способна трансформировать своё тело в воду.</description>
+		<dangerLevel>7</dangerLevel>
+		<habitat>Андрос, водные врата</habitat>
+		<firstMention>2005-09-28</firstMention>
+		<immunities>утопление, жидкая магия</immunities>
+		<activity>ночью</activity>
+		<height>1.68 м</height>
+		<weight>55 кг</weight>
+		<recipe>
+		  <type>амфибийная сыворотка</type>
+		  <ingredients>
+			<entry><key>чешуя морского змея</key><value>2</value></entry>
+			<entry><key>жемчужина прилива</key><value>1</value></entry>
+			<entry><key>соль лунной волны</key><value>3</value></entry>
+		  </ingredients>
+		  <preparationTime>70 мин</preparationTime>
+		  <effectiveness>погружающая</effectiveness>
+		</recipe>
+	</monster>
+	<monster>
+		<name>Стелла</name>
+		<description>Фея света и солнца. Слепит врагов сиянием, восстанавливает силы союзников.</description>
+		<dangerLevel>6</dangerLevel>
+		<habitat>Солярия, небесные поля</habitat>
+		<firstMention>2004-01-21</firstMention>
+		<immunities>ослепление, световая магия</immunities>
+		<activity>днём</activity>
+		<height>1.69 м</height>
+		<weight>51 кг</weight>
+		<recipe>
+		  <type>солнечная эссенция</type>
+		  <ingredients>
+			<entry><key>свет утренней зари</key><value>2</value></entry>
+			<entry><key>золотая пыльца</key><value>1</value></entry>
+			<entry><key>кристалл яркости</key><value>1</value></entry>
+		  </ingredients>
+		  <preparationTime>50 мин</preparationTime>
+		  <effectiveness>энергетическая</effectiveness>
+		</recipe>
+	</monster>
 </monsters>

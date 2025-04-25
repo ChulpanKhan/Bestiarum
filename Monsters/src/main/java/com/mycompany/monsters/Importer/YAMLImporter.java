@@ -1,7 +1,7 @@
 
 package com.mycompany.monsters.Importer;
 
-import com.mycompany.monsters.Importer.ImportHandler;
+import com.mycompany.monsters.GUI.DialogUtils;
 import com.mycompany.monsters.Monster;
 import com.mycompany.monsters.MonsterStorage;
 import java.io.File;
@@ -9,13 +9,9 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.Reader;
-import java.nio.charset.StandardCharsets;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import org.yaml.snakeyaml.TypeDescription;
 import org.yaml.snakeyaml.Yaml;
 import org.yaml.snakeyaml.constructor.Constructor;
 
@@ -36,22 +32,24 @@ public class YAMLImporter implements ImportHandler{
     public void handle(File file, MonsterStorage storage) {
         if (canHandle(file)) {
             try (InputStream inputStream = new FileInputStream(file);) {
-                Constructor constructor = new Constructor(Monster.class);
-//                TypeDescription monsterDescription = new TypeDescription(Monster.class);
-//                monsterDescription.addPropertyParameters("recipe", Recipe.class);
-//                constructor.addTypeDescription(monsterDescription);
-
+                Constructor constructor = new Constructor(List.class);
                 Yaml yaml = new Yaml(constructor);
-                Iterable<Object> data = yaml.loadAll(inputStream);
-                for (Object obj : data) {
-                    if (obj instanceof Monster m) {
-                        m.setSource("yaml");
-                        storage.add(m);
-                    }
+                List<Monster> monsters = yaml.load(inputStream);
+
+                for (Monster m : monsters) {
+                    m.setSource("yaml");
+                    if (monsters.indexOf(m) < 5) {
+                        m.setUniverse("ведьмак");
+                    } else {
+                        m.setUniverse("винкс");
+                    } 
+                    storage.add(m);
                 }
             } catch (FileNotFoundException ex) {
+                DialogUtils.showErrorMessage(ex.getMessage());
                 Logger.getLogger("gjgjgj" + YAMLImporter.class.getName()).log(Level.SEVERE, null, ex);
             } catch (IOException ex) {
+                DialogUtils.showErrorMessage(ex.getMessage());
                 Logger.getLogger(YAMLImporter.class.getName()).log(Level.SEVERE, null, ex);
             }
         } else if (nextHandler != null) nextHandler.handle(file, storage);

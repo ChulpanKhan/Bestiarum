@@ -1,9 +1,12 @@
 
 package com.mycompany.monsters;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import java.beans.Transient;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlTransient;
 
 @XmlRootElement(name = "monster")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -19,7 +22,12 @@ public class Monster {
     private String height;
     private String weight;
     private Recipe recipe;
+    @JsonIgnore              
+    @XmlTransient            
     private String source;
+    @JsonIgnore               
+    @XmlTransient 
+    private String universe;
     
     //getters
     public String getName() {
@@ -55,8 +63,13 @@ public class Monster {
     public Recipe getRecipe() {
         return recipe;
     }
+    @Transient
     public String getSource() {
         return source;
+    }
+    @Transient
+    public String getUniverse() {
+        return universe;
     }
      
     //setters  
@@ -95,5 +108,13 @@ public class Monster {
     }
     public void setSource(String source) {
         this.source = source;
+    }
+    public void setUniverse(String universe) {
+        this.universe = universe;
+    }
+    
+    @Override
+    public String toString() {
+        return name;
     }
 }

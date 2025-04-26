@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<monsters>
+    <monster>
+        <name>Леший</name>
+        <description>Гибрид человека и лесного духа, охраняющий древние рощи.</description>
+        <dangerLevel>7</dangerLevel>
+        <habitat>чащи Брокилона и Эдингеля</habitat>
+        <firstMention>1234-06-21</firstMention>
+        <immunities>неуязвим к магии, оглушение, яды</immunities>
+        <activity>ночью</activity>
+        <height>3 м</height>
+        <weight>300 кг</weight>
+        <recipe>
+            <type>яд</type>
+            <ingredients>
+                <entry>
+                    <key>эссенция полыни</key>
+                    <value>1</value>
+                </entry>
+                <entry>
+                    <key>корень мандрагоры</key>
+                    <value>3</value>
+                </entry>
+                <entry>
+                    <key>пепел драконида</key>
+                    <value>1</value>
+                </entry>
+            </ingredients>
+            <preparationTime>60 мин</preparationTime>
+            <effectiveness>умеренная</effectiveness>
+        </recipe>
+    </monster>
+    <monster>
+        <name>Полуденница</name>
+        <description>Призрак, терроризирующий поля во время жатвы.</description>
+        <dangerLevel>5</dangerLevel>
+        <habitat>поля Редании и амбары Туссента</habitat>
+        <firstMention>1198-07-15</firstMention>
+        <vulnerabilities>световая магия</vulnerabilities>
+        <immunities>кровотечение</immunities>
+        <activity>днём</activity>
+        <weight>неосязаем</weight>
+        <recipe>
+            <type>масло</type>
+            <ingredients>
+                <entry>
+                    <key>лепестки лунного цветка</key>
+                    <value>2</value>
+                </entry>
+                <entry>
+                    <key>экстракт чеснока</key>
+                    <value>1</value>
+                </entry>
+                <entry>
+                    <key>серебряная нить</key>
+                    <value>1</value>
+                </entry>
+            </ingredients>
+            <preparationTime>30 мин</preparationTime>
+            <effectiveness>высокая</effectiveness>
+        </recipe>
+    </monster>
+    <monster>
+        <name>Катакан</name>
+        <description>Крылатый демон с хвостом скорпиона.</description>
+        <dangerLevel>9</dangerLevel>
+        <habitat>горные пещеры Туссента</habitat>
+        <firstMention>1150-04-12</firstMention>
+        <immunities>огонь, яды</immunities>
+        <activity>в сумерках</activity>
+        <height>2 м</height>
+        <weight>200 кг</weight>
+        <recipe>
+            <type>масло</type>
+            <ingredients>
+                <entry>
+                    <key>жало мантикоры</key>
+                    <value>4</value>
+                </entry>
+                <entry>
+                    <key>спирт Альберихта</key>
+                    <value>1</value>
+                </entry>
+                <entry>
+                    <key>нефритовая пыль</key>
+                    <value>2</value>
+                </entry>
+            </ingredients>
+            <preparationTime>90 мин</preparationTime>
+            <effectiveness>критическая</effectiveness>
+        </recipe>
+    </monster>
+    <monster>
+        <name>Кикимора</name>
+        <description>Болотная нежить из гниющих останков.</description>
+        <dangerLevel>6</dangerLevel>
+        <habitat>топи Вендена</habitat>
+        <firstMention>1221-09-03</firstMention>
+        <vulnerabilities>земляная магия</vulnerabilities>
+        <immunities>удушье</immunities>
+        <activity>ночью</activity>
+        <height>1 м</height>
+        <weight>15 кг</weight>
+        <recipe>
+            <ingredients>
+                <entry>
+                    <key>глаз василиска</key>
+                    <value>1</value>
+                </entry>
+                <entry>
+                    <key>роса папоротника</key>
+                    <value>3</value>
+                </entry>
+                <entry>
+                    <key>грибы-поганки</key>
+                    <value>5</value>
+                </entry>
+            </ingredients>
+            <preparationTime>45 мин</preparationTime>
+            <effectiveness>средняя</effectiveness>
+        </recipe>
+    </monster>
+    <monster>
+        <name>Элементаль льда</name>
+        <description>Дух вечной зимы.</description>
+        <dangerLevel>10</dangerLevel>
+        <habitat>ледники Ковира</habitat>
+        <firstMention>1105-12-01</firstMention>
+        <immunities>заморозка, дробление</immunities>
+        <activity>всегда</activity>
+        <height>5 м</height>
+        <weight>не измерим</weight>
+        <recipe>
+            <type>яд</type>
+            <ingredients>
+                <entry>
+                    <key>расплавленное железо</key>
+                    <value>1</value>
+                </entry>
+                <entry>
+                    <key>сера</key>
+                    <value>3</value>
+                </entry>
+                <entry>
+                    <key>сердце огненного элементаля</key>
+                    <value>1</value>
+                </entry>
+            </ingredients>
+            <preparationTime>120 мин</preparationTime>
+            <effectiveness>переменная</effectiveness>
+        </recipe>
+    </monster>
+    <monster>
+        <name>Блум</name>
+        <description>Фея Огня Дракона, обладающая древней магией. Является связующим звеном между миром людей и Магиксом.</description>
+        <dangerLevel>8</dangerLevel>
+        <habitat>Алфея, Домино, Пылающие поля</habitat>
+        <firstMention>2004-01-28</firstMention>
+        <vulnerabilities>Ледяная магия, магия тьмы (в моменты сомнений), потеря контроля над эмоциями</vulnerabilities>
+        <immunities>огонь, проклятия, иллюзии</immunities>
+        <activity>днём и в бою</activity>
+        <height>1.65 м</height>
+        <weight>50 кг</weight>
+        <recipe>
+            <type>магический эликсир</type>
+            <ingredients>
+                <entry>
+                    <key>искра древнего пламени</key>
+                    <value>1</value>
+                </entry>
+                <entry>
+                    <key>слёзы саламандры</key>
+                    <value>5</value>
+                </entry>
+                <entry>
+                    <key>пепел феникса</key>
+                    <value>2</value>
+                </entry>
+            </ingredients>
+            <preparationTime>90 мин</preparationTime>
+            <effectiveness>высокая</effectiveness>
+        </recipe>
+    </monster>
+    <monster>
+        <name>Муза</name>
+        <description>Фея музыки, питающаяся ритмом и гармонией. Может успокаивать разум и нарушать магические потоки.</description>
+        <dangerLevel>6</dangerLevel>
+        <habitat>Мелодия, леса звуков</habitat>
+        <firstMention>2004-02-04</firstMention>
+        <vulnerabilities>Громкие диссонирующие звуки, магическое заглушение (тишина), потеря концентрации</vulnerabilities>
+        <immunities>ментальная атака, гипноз</immunities>
+        <activity>ночью</activity>
+        <height>1.63 м</height>
+        <weight>48 кг</weight>
+        <recipe>
+            <type>настой</type>
+            <ingredients>
+                <entry>
+                    <key>эхосфера</key>
+                    <value>3</value>
+                </entry>
+                <entry>
+                    <key>кристалл тишины</key>
+                    <value>1</value>
+                </entry>
+                <entry>
+                    <key>стебель лиры</key>
+                    <value>2</value>
+                </entry>
+            </ingredients>
+            <preparationTime>45 мин</preparationTime>
+            <effectiveness>умеренная</effectiveness>
+        </recipe>
+    </monster>
+    <monster>
+        <name>Флора</name>
+        <description>Фея природы. Управляет растениями, создаёт лечебные отвары и яды.</description>
+        <dangerLevel>5</dangerLevel>
+        <habitat>Линфея, волшебные сады</habitat>
+        <firstMention>2004-02-11</firstMention>
+        <vulnerabilities>Огненная магия, засуха, химические пестициды</vulnerabilities>
+        <immunities>яды, парализующие токсины</immunities>
+        <activity>днём</activity>
+        <height>1.70 м</height>
+        <weight>52 кг</weight>
+        <recipe>
+            <type>зелье</type>
+            <ingredients>
+                <entry>
+                    <key>лепестки вечной розы</key>
+                    <value>3</value>
+                </entry>
+                <entry>
+                    <key>корень цветущего дуба</key>
+                    <value>4</value>
+                </entry>
+            </ingredients>
+            <preparationTime>60 мин</preparationTime>
+            <effectiveness>лечебная</effectiveness>
+        </recipe>
+    </monster>
+    <monster>
+        <name>Лейла</name>
+        <description>Фея волн. Контролирует жидкости и способна трансформировать своё тело в воду.</description>
+        <dangerLevel>7</dangerLevel>
+        <habitat>Андрос, водные врата</habitat>
+        <firstMention>2005-09-28</firstMention>
+        <vulnerabilities>Электрическая магия, замораживание, обезвоживание</vulnerabilities>
+        <immunities>AAAAA</immunities>
+        <activity>ночью</activity>
+        <height>1.68 м</height>
+        <weight>55 кг</weight>
+        <recipe>
+            <type>амфибийная сыворотка</type>
+            <ingredients>
+                <entry>
+                    <key>жемчужина прилива</key>
+                    <value>1</value>
+                </entry>
+                <entry>
+                    <key>чешуя морского змея</key>
+                    <value>2</value>
+                </entry>
+                <entry>
+                    <key>соль лунной волны</key>
+                    <value>3</value>
+                </entry>
+            </ingredients>
+            <preparationTime>70 мин</preparationTime>
+            <effectiveness>погружающая</effectiveness>
+        </recipe>
+    </monster>
+    <monster>
+        <name>Стелла</name>
+        <description>Фея света и солнца. Слепит врагов сиянием, восстанавливает силы союзников.</description>
+        <dangerLevel>6</dangerLevel>
+        <habitat>Солярия, небесные поля</habitat>
+        <firstMention>2004-01-21</firstMention>
+        <vulnerabilities>Теневая магия, солнечные затмения, отражённый свет</vulnerabilities>
+        <immunities>ослепление, световая магия</immunities>
+        <activity>днём</activity>
+        <height>1.69 м</height>
+        <weight>51 кг</weight>
+        <recipe>
+            <type>солнечная эссенция</type>
+            <ingredients>
+                <entry>
+                    <key>золотая пыльца</key>
+                    <value>1</value>
+                </entry>
+                <entry>
+                    <key>свет утренней зари</key>
+                    <value>2</value>
+                </entry>
+                <entry>
+                    <key>кристалл яркости</key>
+                    <value>1</value>
+                </entry>
+            </ingredients>
+            <preparationTime>50 мин</preparationTime>
+            <effectiveness>энергетическая</effectiveness>
+        </recipe>
+    </monster>
+</monsters>

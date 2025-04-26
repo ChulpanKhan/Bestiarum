@@ -110,9 +110,7 @@ public class MonsterDetailPanel extends JPanel {
         JTextArea ingredientArea = new JTextArea();
         ingredientArea.setFont(font);
         ingredientArea.setBackground(backgroundColor);
-        ingredientArea.setText(recipe.getIngredients().entrySet().stream()
-                .map(entry -> entry.getKey() + ": " + entry.getValue())
-                .reduce((a, b) -> a + "\n" + b).orElse(""));
+        ingredientArea.setText(recipe.getIngredients().entrySet().stream().map(entry -> entry.getKey() + ": " + entry.getValue()).reduce((a, b) -> a + "\n" + b).orElse(""));
         ingredientArea.setLineWrap(true);
         ingredientArea.setWrapStyleWord(true);
 
@@ -126,15 +124,24 @@ public class MonsterDetailPanel extends JPanel {
         save.setFocusPainted(false);
         save.setBorder(BorderFactory.createEmptyBorder(5, 15, 5, 15));
 
+        
         save.addActionListener(e -> {
+            boolean hasError = false;
             monster.setName(name.getText());
             monster.setDescription(desc.getText());
-            monster.setDangerLevel(Integer.parseInt(level.getText()));
+            try{
+                int denger = Integer.parseInt(level.getText());
+                monster.setDangerLevel(denger);
+            } catch (NumberFormatException ex){
+                DialogUtils.showErrorMessage("Опасность может быть только числом");
+                hasError = true;
+            }
             monster.setHabitat(habitat.getText());
             monster.setFirstMention(mention.getText());
             monster.setActivity(activity.getText());
             monster.setHeight(height.getText());
                         monster.setVulnerabilities(vulnerabilities.getText());
+                        monster.setImmunities(immArea.getText());
             monster.setWeight(weight.getText());
             
             recipe.setType(recipeType.getText());
@@ -142,14 +149,15 @@ public class MonsterDetailPanel extends JPanel {
             recipe.setEffectiveness(effectiveness.getText());
 
             Map<String, Integer> ingredients = new HashMap<>();
-            boolean hasError = false;
 
             for (String line : ingredientArea.getText().split("\\n")) {
                 if (!line.trim().isEmpty() && line.contains(":")) {
                     String[] parts = line.split(":", 2);
                     try {
                         ingredients.put(parts[0].trim(), Integer.valueOf(parts[1].trim()));
+                        recipe.setIngredients(ingredients);
                     } catch (NumberFormatException ex) {
+                        DialogUtils.showErrorMessage("Некоторые строки ингредиентов были введены неверно. Используйте формат: имя:число");
                         hasError = true;
                     }
                 } else if (!line.trim().isEmpty()) {
@@ -158,10 +166,9 @@ public class MonsterDetailPanel extends JPanel {
             }
 
             if (hasError) {
-                DialogUtils.showErrorMessage("Некоторые строки ингредиентов были введены неверно. Используйте формат: имя:число");
+                //DialogUtils.showErrorMessage("Некоторые строки ингредиентов были введены неверно. Используйте формат: имя:число");
             } else {
                 DialogUtils.showSuccessDialog("Данные успешно сохранены!");
-                recipe.setIngredients(ingredients);
             }
 
         });

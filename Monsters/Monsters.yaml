@@ -100,6 +100,7 @@
   dangerLevel: 8
   habitat: Алфея, Домино, Пылающие поля
   firstMention: '2004-01-28'
+  vulnerabilities: Ледяная магия, магия тьмы (в моменты сомнений), потеря контроля над эмоциями
   immunities: огонь, проклятия, иллюзии
   activity: днём и в бою
   height: 1.65 м
@@ -120,6 +121,7 @@
   dangerLevel: 6
   habitat: Мелодия, леса звуков
   firstMention: '2004-02-04'
+  vulnerabilities: Громкие диссонирующие звуки, магическое заглушение (тишина), потеря концентрации
   immunities: ментальная атака, гипноз
   activity: ночью
   height: 1.63 м
@@ -139,6 +141,7 @@
   dangerLevel: 5
   habitat: Линфея, волшебные сады
   firstMention: '2004-02-11'
+  vulnerabilities: Огненная магия, засуха, химические пестициды
   immunities: яды, парализующие токсины
   activity: днём
   height: 1.70 м
@@ -159,6 +162,7 @@
   dangerLevel: 7
   habitat: Андрос, водные врата
   firstMention: '2005-09-28'
+  vulnerabilities: Электрическая магия, замораживание, обезвоживание
   immunities: утопление, жидкая магия
   activity: ночью
   height: 1.68 м
@@ -178,6 +182,7 @@
   dangerLevel: 6
   habitat: Солярия, небесные поля
   firstMention: '2004-01-21'
+  vulnerabilities: Теневая магия, солнечные затмения, отражённый свет
   immunities: ослепление, световая магия
   activity: днём
   height: 1.69 м

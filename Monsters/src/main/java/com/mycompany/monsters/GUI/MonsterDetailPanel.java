@@ -26,7 +26,7 @@ public class MonsterDetailPanel extends JPanel {
     private JLabel welcomeLabel;
     private Color backgroundColor;
     private Font font;
-    private final Font witcherFont = FontLoader.loadFont("/fonts/MasonChronicles.ttf", 16f);;
+    private final Font witcherFont = FontLoader.loadFont("/fonts/masonchronicles.ttf", 16f);;
     private final Font winxFont =  FontLoader.loadFont("/fonts/magicwixscriptrus.otf", 16f);
 
     public MonsterDetailPanel() {
@@ -134,8 +134,9 @@ public class MonsterDetailPanel extends JPanel {
             monster.setFirstMention(mention.getText());
             monster.setActivity(activity.getText());
             monster.setHeight(height.getText());
+                        monster.setVulnerabilities(vulnerabilities.getText());
             monster.setWeight(weight.getText());
-
+            
             recipe.setType(recipeType.getText());
             recipe.setPreparationTime(prepTime.getText());
             recipe.setEffectiveness(effectiveness.getText());

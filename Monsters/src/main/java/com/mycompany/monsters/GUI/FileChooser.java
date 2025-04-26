@@ -18,13 +18,14 @@ public class FileChooser {
 
         int userSelection = fileChooser.showOpenDialog(null);
         if (userSelection == JFileChooser.APPROVE_OPTION) {
+            DialogUtils.showSuccessDialog("Файл успещно импортирован");
             return fileChooser.getSelectedFile();
         }
         return null;
     }
     
     public static File selectExportFile(String suffix) {
-        JFileChooser fileChooser = new JFileChooser();
+        JFileChooser fileChooser = new JFileChooser(new File(System.getProperty("user.dir")));
         fileChooser.setDialogTitle("Выберите место для экспорта файла");
         fileChooser.setFileFilter(new FileNameExtensionFilter("Files", suffix));
         fileChooser.setFileSelectionMode(JFileChooser.FILES_ONLY);

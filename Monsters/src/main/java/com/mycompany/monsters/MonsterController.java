@@ -4,7 +4,6 @@ package com.mycompany.monsters;
 import com.mycompany.monsters.Exporters.*;
 import com.mycompany.monsters.GUI.DialogUtils;
 import com.mycompany.monsters.GUI.FileChooser;
-import com.mycompany.monsters.GUI.MonsterGUI;
 import com.mycompany.monsters.Importer.*;
 import java.io.File;
 import java.io.IOException;

@@ -2,8 +2,6 @@
 package com.mycompany.monsters;
 
 import com.mycompany.monsters.GUI.MonsterGUI;
-import com.mycompany.monsters.Importer.JSONImporter;
-import java.io.File;
 
 public class MonstersMain {
 
